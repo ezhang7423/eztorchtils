@@ -1,5 +1,6 @@
 # eztorchtils
 
+
 <div align="center">
 
 [![Build status](https://github.com/ezhang7423/eztorchtils/workflows/build/badge.svg?branch=master&event=push)](https://github.com/ezhang7423/eztorchtils/actions?query=workflow%3Abuild)
@@ -16,7 +17,11 @@ eds torch stuff
 
 </div>
 
-## Very first steps
+## Installation
+`pip install eztorchtils`
+
+
+## Local Installation
 
 ### Initialize your code
 
