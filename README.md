@@ -11,7 +11,6 @@
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/ezhang7423/eztorchtils/blob/master/.pre-commit-config.yaml)
 [![Semantic Versions](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg)](https://github.com/ezhang7423/eztorchtils/releases)
 [![License](https://img.shields.io/github/license/ezhang7423/eztorchtils)](https://github.com/ezhang7423/eztorchtils/blob/master/LICENSE)
-![Coverage Report](assets/images/coverage.svg)
 
 eds torch stuff
 
@@ -76,6 +75,7 @@ Poetry's [commands](https://python-poetry.org/docs/cli/#commands) are very intui
 - `poetry publish --build`
 
 etc
+
 </p>
 </details>
 
@@ -114,7 +114,7 @@ Articles:
 
 ### Development features
 
-- Supports for `Python 3.7` and higher.
+- Supports for `Python 3.8` and higher.
 - [`Poetry`](https://python-poetry.org/) as the dependencies manager. See configuration in [`pyproject.toml`](https://github.com/ezhang7423/eztorchtils/blob/master/pyproject.toml) and [`setup.cfg`](https://github.com/ezhang7423/eztorchtils/blob/master/setup.cfg).
 - Automatic codestyle with [`black`](https://github.com/psf/black), [`isort`](https://github.com/timothycrosley/isort) and [`pyupgrade`](https://github.com/asottile/pyupgrade).
 - Ready-to-use [`pre-commit`](https://pre-commit.com/) hooks with code-formatting.
