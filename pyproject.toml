@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "eztorchtils"
-version = "0.3.1"
+version = "0.3.2"
 description = "eds torch stuff"
 readme = "README.md"
 authors = ["ezhang7423 <ezhang7423@student.palomar.edu>"]

@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import numpy as np
 import torch
 from rich.console import Console
 from rich.tree import Tree
@@ -41,8 +42,8 @@ def inspect(obj):
             dict_node = root.add(f"dict")
             for key in obj.keys():
                 add_children(obj[key], dict_node.add(f"[bold]{key}[/bold]"))
-        elif isinstance(obj, list):
-            list_node = root.add(f"list[{len(obj)}]")
+        elif isinstance(obj, list) or isinstance(obj, np.ndarray):
+            list_node = root.add(f"{type(obj)}[{len(obj)}]")
             if len(obj) > 0:
                 add_children(obj[0], list_node)
             if len(obj) > 1:

@@ -13,7 +13,9 @@
 [![Semantic Versions](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg)](https://github.com/ezhang7423/eztorchtils/releases)
 [![License](https://img.shields.io/github/license/ezhang7423/eztorchtils)](https://github.com/ezhang7423/eztorchtils/blob/master/LICENSE)
 
-eds torch stuff
+eds torch stuff.
+
+torch, torchvision, and numpy are required but not specified, so as to be flexible with any environment this package is installed in.
 
 </div>
 
