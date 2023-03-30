@@ -37,21 +37,33 @@ def inspect(obj):
             else:
                 return self.tree.add(label)  # type: ignore
 
+    def type_fmt(obj):
+        # get string within single quotes regex
+        import re
+
+        m = re.search(r"'(.*?)'", str(type(obj)))
+        return m.group(1)
+
     def add_children(obj: object, root: Tree) -> None:
         if isinstance(obj, dict):
             dict_node = root.add(f"dict")
             for key in obj.keys():
                 add_children(obj[key], dict_node.add(f"[bold]{key}[/bold]"))
         elif isinstance(obj, list) or isinstance(obj, np.ndarray):
-            list_node = root.add(f"{type(obj)}[{len(obj)}]")
-            if len(obj) > 0:
-                add_children(obj[0], list_node)
-            if len(obj) > 1:
+            list_node = root.add(f"{type_fmt(obj)}[{len(obj)}]")
+            if len(obj) == 0:
+                return
+            for i in range(min(3, len(obj))):
+                add_children(obj[i], list_node)
+            if len(obj) > 3:
                 list_node.add("...")
         elif isinstance(obj, torch.Tensor):
-            root.add(f"tensor[[blue]{tuple(obj.shape)}[/blue]; {obj.dtype}]")
+            root.add(f"tensor[[blue]{tuple(obj.shape)}; {obj.dtype}[/blue]]")
         else:
-            root.add(str(type(obj)))
+            repr = str(obj)
+            if len(repr) > 100:
+                repr = repr[:100] + "..."
+            root.add(f"{type_fmt(obj)}: [blue]{repr}[/blue]")
 
     treewrapper = TreeWrapper()
     add_children(obj, treewrapper)  # type: ignore
