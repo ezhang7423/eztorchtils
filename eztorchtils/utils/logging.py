@@ -23,7 +23,7 @@ purple = print_creator("purple")
 orange = print_creator("orange")
 
 
-def inspect(obj):
+def inspect(obj, list_expand=3):
     console = Console(record=True)
 
     class TreeWrapper:
@@ -53,9 +53,9 @@ def inspect(obj):
             list_node = root.add(f"{type_fmt(obj)}[{len(obj)}]")
             if len(obj) == 0:
                 return
-            for i in range(min(3, len(obj))):
+            for i in range(min(list_expand, len(obj))):
                 add_children(obj[i], list_node)
-            if len(obj) > 3:
+            if len(obj) > list_expand:
                 list_node.add("...")
         elif isinstance(obj, torch.Tensor):
             root.add(f"tensor[[blue]{tuple(obj.shape)}; {obj.dtype}[/blue]]")
