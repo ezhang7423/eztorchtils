@@ -36,6 +36,7 @@ einops = "^0.4.1"
 tqdm = "^4.64.0"
 torchtyping = "^0.1.4"
 torchvision = "^0.15.1"
+loguru = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.1"
