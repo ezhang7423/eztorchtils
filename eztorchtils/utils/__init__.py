@@ -1,4 +1,4 @@
-import inspect
+import inspect as inspect_
 import os
 import random
 from inspect import getsourcefile, isfunction
@@ -53,7 +53,7 @@ def abspath():
     # https://docs.python.org/3/library/inspect.html#inspect.FrameInfo
     # return os.path.dirname(inspect.stack()[1][1]) # type: ignore
     # return os.path.dirname(getsourcefile(lambda:0)) # type: ignore
-    return os.path.dirname(getsourcefile(inspect.stack()[1][0]))  # type: ignore
+    return os.path.dirname(getsourcefile(inspect_.stack()[1][0]))  # type: ignore
 
 
 from .arrays import *
