@@ -33,7 +33,7 @@ python = "^3.8"
 rich = "^13.3.3"
 einops = "^0.6.0"
 tqdm = "^4.65.0"
-loguru = "^0.6.0"
+loguru = ">=0.6,<0.8"
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.5"
