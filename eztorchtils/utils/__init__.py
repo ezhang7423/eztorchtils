@@ -59,3 +59,4 @@ def abspath():
 from .arrays import *
 from .logging import *
 from .model_wrappers import *
+from .structures import *
