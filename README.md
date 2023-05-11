@@ -79,7 +79,7 @@ Poetry's [commands](https://python-poetry.org/docs/cli/#commands) are very intui
 
 - `poetry add numpy@latest`
 - `poetry run pytest`
-- `poetry publish --build`
+- `poetry publish --build -u ezipe -p R...`
 
 etc
 
