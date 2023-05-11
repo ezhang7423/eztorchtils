@@ -11,7 +11,7 @@ license = "MIT"
 name = "eztorchtils"
 readme = "README.md"
 repository = "https://github.com/ezhang7423/eztorchtils"
-version = "0.3.5"
+version = "0.3.6"
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
 keywords = [] #! Update me
@@ -35,10 +35,11 @@ loguru = "^0.6.0"
 python = "^3.8"
 rich = "^13.3.3"
 tqdm = "^4.65.0"
+numpy = "^1.24.3"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 bandit = "^1.7.5"
-black = {version = "^23.3.0", allow-prereleases = true}
+black = "^23.3.0"
 coverage = "^7.2.2"
 coverage-badge = "^1.1.0"
 darglint = "^1.8.1"
@@ -52,10 +53,8 @@ pytest = "^7.2.2"
 pytest-cov = "^4.0.0"
 pytest-html = "^3.2.0"
 pyupgrade = "^3.3.1"
-safety = "^2.3.5"
-
-[tool.poetry.group.dev.dependencies]
 ipython = "^8.11.0"
+
 
 [tool.black]
 # https://github.com/psf/black
