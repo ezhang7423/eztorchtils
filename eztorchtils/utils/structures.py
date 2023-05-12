@@ -1,4 +1,3 @@
-
 class AttriDict(dict):
     """
     A dict which is accessible via attribute dot notation
